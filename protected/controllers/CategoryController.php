@@ -49,7 +49,8 @@ class CategoryController extends Controller
 	 */
 	public function actionIndex($url='')
 	{
-            $_category = Category::model()->with('cat_language')->findByAttributes(array('url'=>$url));
+		
+			$_category = Category::model()->with(array('cat_language','products.product.prod_attr.attr_label'=>array('condition'=>'product.active=1','order'=>'product.sort DESC, attr_label.id desc')))->findByAttributes(array('url'=>$url));
 	    
             $categories = Category::model()->with(array('cat_language','products.product.prod_attr.attr_label'=>array('condition'=>'product.active=1','order'=>'product.sort DESC, attr_label.id desc')))
                                           ->findAll("parent=$_category->id or cat_language.id = $_category->id" );
@@ -60,9 +61,31 @@ class CategoryController extends Controller
                 $this->title = $_category->cat_language[0]->name;
 
             $this->meta_descr = $_category->cat_language[0]->meta_descr;
-	    $this->meta_keywords = $_category->cat_language[0]->meta_keywords;
-            
-            $this->render('index',array('categories'=>$categories,'cur_category' => $_category->cat_language[0]));
+			$this->meta_keywords = $_category->cat_language[0]->meta_keywords;
+			
+			$attrs = [];
+			foreach ($_category->products as $product) {
+				foreach ($product->product->prod_attr as $_index=>$attr) {
+					if ($attr->value!="") {
+						$value = $attr->value;
+						$notEmpty = true;
+					} else {
+						$value = "-";
+					}
+					$attrs[ $attr->attr_label->name ] [$product->id_prod] = $value;
+				}
+			}
+			foreach($attrs as $name=>$values) {
+				$isEmpty = true;
+				foreach($values as $id_prod=>$value) {
+					$isEmpty = $isEmpty && ($value == "-");
+				}
+				if ($isEmpty) {
+					unset($attrs[$name]);
+				}
+			}
+
+            $this->render('index',array('attrs'=>$attrs, 'products'=>$_category->products,'cur_category' => $_category->cat_language[0]));
 	}
 
 	/**

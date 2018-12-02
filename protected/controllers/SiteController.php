@@ -29,15 +29,14 @@ class SiteController extends Controller
 
 	public function actionIndex()
 	{ 
-	    $this->title = Yii::app()->params['main_title'];
+	    /*$this->title = Yii::app()->params['main_titl/e'];
 	    $this->meta_descr = Yii::app()->params['main_description'];
 	    $criteria = new CDBCriteria;
 	    $criteria->with = array('news_lang');
 	    $criteria->compare('active',1);
 	    $criteria->order = 't.id desc';
-	    $news = News::model()->findAll($criteria);
-	    
-            $this->render('index',array('news'=>$news));
+	    $news = News::model()->findAll($criteria);*/
+		$this->render('index');
 	}
 
 	public function actionContact()

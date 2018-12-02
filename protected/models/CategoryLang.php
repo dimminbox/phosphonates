@@ -45,6 +45,7 @@ class CategoryLang extends CActiveRecord
 			array('title', 'length', 'max'=>600),
 			array('meta_descr, meta_keywords', 'length', 'max'=>200),
 			array('description', 'length', 'min'=>0),
+			array('bottom', 'length', 'min'=>0),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('id, name, title, meta_descr, meta_keywords, description, id_lang', 'safe', 'on'=>'search'),

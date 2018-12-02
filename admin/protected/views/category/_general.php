@@ -102,6 +102,28 @@
 
     <?php echo $form->error($cat_lang,'description'); ?>
 </div>
+<div class="row1">
+    <div class="labels">
+            <?php echo $form->labelEx($cat_lang,'bottom'); ?>
+    </div>
+    <?php $this->widget('application.extensions.fckeditor.FCKEditorWidget',array(
+    "model"=>$cat_lang,                # Data-Model
+    "attribute"=>'bottom',         # Attribute in the Data-Model
+    "height"=>'400px',
+    "width"=>'100%',
+    "toolbarSet"=>'Default',          # EXISTING(!) Toolbar (see: fckeditor.js)
+    "fckeditor"=>Yii::app()->basePath."/../fckeditor/fckeditor.php",
+                                    # Path to fckeditor.php
+    "fckBasePath"=>Yii::app()->baseUrl."/fckeditor/",
+                                    # Realtive Path to the Editor (from Web-Root)
+    "config" => array(
+        "EditorAreaCSS"=>Yii::app()->baseUrl.'/css/index.css',),
+                                    # http://docs.fckeditor.net/FCKeditor_2.x/Developers_Guide/Configuration/Configuration_Options
+                                    # Additional Parameter (Can't configure a Toolbar dynamicly)
+    ) ); ?>
+
+    <?php echo $form->error($cat_lang,'bottom'); ?>
+</div>
 
 <div class="row">
     <div class="labels">

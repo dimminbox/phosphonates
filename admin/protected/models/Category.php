@@ -157,9 +157,9 @@ class Category extends CActiveRecord
                    }
             }
             
-            if ($result){
+            
                 Yii::app()->getRequest()->redirect(Yii::app()->createUrl('category/update',array('id'=>$cat_lang->id)));
-            }
+            
             
         }
         protected function beforeValidate()
