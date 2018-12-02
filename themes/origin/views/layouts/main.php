@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <?php echo CHtml::cssFile(Yii::app()->theme->baseUrl.'/css/main.css');?>
+    <title>Купить фосфонаты и фосфоновые кислоты компании "Zschimmer & Schwarz", Германия</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container header">
+        <div class="row">
+          <div class="col-sm">
+            <a class="headerLogo" href="/">
+            </a>
+          </div>
+          <div class="col-sm text-right">
+            <p class="phone">+7 4912 30 19 33</p>
+            <div class="input-group mb-3 search">
+              <input type="text" class="form-control">
+              <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button" id="button-addon2"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid menuWrapper">
+        <nav class="navbar navbar-expand-lg">
+          <a class="navbar-brand" href="#"></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="/catalog.html">
+                  <span>Каталог</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span>О компании</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span>Обратная связь</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span>Сертификаты</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span>Контакты</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span>Статьи</span>
+                </a>
+              </li>
+        </nav>
+      </div>
+
+      <div class="container-fluid mainBan">
+        <div id="carouselExampleControls" class="carousel slide carouselContainer" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="carousel-content">
+                <div class="banMainContent">
+                  <div class="bannerImg">
+                    <img class="d-block w-100" src="<?=Yii::app()->theme->baseUrl?>/images/pic_1.png" alt="First slide">
+                  </div>
+                  <p class="banText">
+                    Под маркой PLEVREN фирма “Zschimmer & Schwarz Mohsdorf”, Германия предлагает целый ряд фосфонатов, которые применяются для производства средств бытовой химии и в водообработке вот уже несколько лет. Представленные фосфонаты имеют сходные общие химические свойства, предполагающие общую взаимозаменяемость фосфонатов. Однако, такая точка зрения не совсем верная. Так как фосфонаты имеют различную химическую структуру , то, соответственно, и выраженные их характеристики проявляются по-разному. Этот факт позволяет предлагать из нашего ассортимента продукты, которые могут использоваться в различных химических и технических сферах.
+                  </p>
+                </div>
+                <div class="ban-bottomBlock">
+                  <div class="line">
+                    <div class="lineTextWrapper">
+                      <p>Фосфонаты <span>«ZSCHIMMER & SCHWARZ»</span> Германия</p>
+                    </div>
+                  </div>
+                  <div class="btn-banner-more">
+                    <a href="#">Подробнее</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="carousel-content">
+                <div class="banMainContent">
+                  <p class="banText">
+                    В современном пищевом, пивном производстве, виноделии, молочной и мясной промышленности используются закрытые герметичные системы для изготовления продукции. Такое оборудование необходимо периодически очищать и дезинфицировать, не разбирая его на составные части. Для этого существуют специальные станции, называемые CIP-мойками.
+                  </p>
+                </div>
+                <div class="ban-bottomBlock">
+                  <div class="line">
+                    <div class="lineTextWrapper">
+                      <p>Сырьё марки <span>PLEVREN</span> для производства моющих средств и очистителей для CIP — мойки оборудования</p>
+                    </div>
+                  </div>
+                  <div class="btn-banner-more">
+                    <a href="#">Подробнее</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="carousel-content">
+                <div class="banMainContent">
+                  <p class="banText">
+                    Будь то для домашнего хозяйства или крупной промышленности, для производства моющих средств и косметики, а также бумажных и текстильных изделий или в опреснительных системах и системах охлаждения воды, где вода используется в промышленных масштабах, повсюду используются фосфонаты компании Zschimmer & Schwarz. Благодаря своим выдающимся свойствам они гарантируют как экономичные, так и энергоэффективные результаты. В тесном сотрудничестве с нашими клиентами мы разрабатываем специальные продукты, адаптированные к потребностям и требованиям заказчика, которые последовательно отвечают самым высоким стандартам безопасности, качества и окружающей среды.
+                  </p>
+                </div>
+                <div class="ban-bottomBlock">
+                  <div class="line">
+                    <div class="lineTextWrapper">
+                      <p>Фосфонаты <span>PLEVREN</span></p>
+                    </div>
+                  </div>
+                  <div class="btn-banner-more">
+                    <a href="#">Подробнее</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <img src="<?=Yii::app()->theme->baseUrl?>/images/arrow-left.png">
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <img src="<?=Yii::app()->theme->baseUrl?>/images/arrow-right.png">
+          </a>
+        </div>
+      </div>
+
+    <?php echo Yii::app()->runController('/event/view/id/3'); ?>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>

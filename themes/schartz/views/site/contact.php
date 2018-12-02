@@ -1,0 +1,1 @@
+<?php echo Yii::app()->runController('/event/view/id/1'); ?>

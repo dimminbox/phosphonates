@@ -1,0 +1,45 @@
+input.button
+{
+  color: #FFF;
+  font-weight: bold;
+  background: #0F74B3;
+  border: none;
+  height: 20px;
+  vertical-align: middle;
+}
+
+.big
+{
+  width: 287px;
+  height: 16px;
+}
+
+.big_area
+{
+  width: 287px;
+  height: 150px;
+}
+
+.small
+{
+  width: 51px;
+  font-size: 11px;
+  height: 16px;
+}
+
+.middle
+{
+  width: 231px;
+  height: 16px;
+}
+
+.msg
+{
+  color: #CC0006;
+  font-weight: bold;
+}
+
+td.field
+{
+  text-align: right;
+}

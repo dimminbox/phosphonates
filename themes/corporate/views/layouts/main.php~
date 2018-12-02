@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Zschimmer &amp; Schwarz | Zschimmer &amp; Schwarz Gruppe</title>
+  <?php echo CHtml::cssFile(Yii::app()->theme->baseUrl.'/css/style.css');?>
+  <?php echo CHtml::scriptFile(Yii::app()->theme->baseUrl.'/js/cufon-yui.js');?>
+  <?php echo CHtml::scriptFile(Yii::app()->theme->baseUrl.'/js/arial.js');?>
+  <?php echo CHtml::scriptFile(Yii::app()->theme->baseUrl.'/js/cuf_run.js');?>
+</head>
+
+<body>
+<div class="main">
+  <div class="header">
+    <div class="header_resize">
+      <div class="logo">
+        <div class="header_img"><img src="images/logo3.jpg" alt="image" height="59px"/></div>
+      </div>
+
+      <div class="menu_nav">
+       <ul>
+        <li class="active"><a href="index.html"><span>Главная</span></a></li>
+          <li><a href="support.html"><span>О компании</span></a></li>
+          <li><a href="about.html"><span>Статьи</span></a></li>
+          <li><a href="blog.html"><span>Новости</span></a></li>
+          <li><a href="contact.html"><span>Сертификаты</span></a></li>
+          <li><a href="contact.html"><span>Документы</span></a></li>
+      </ul>        
+        <div class="clr"></div>
+      </div>
+      <div class="clr"></div>
+      
+      
+      <div class="header_img">
+          
+          <div class="float_left" >
+                <img src="images/mohsdorf.jpg" alt="image" />
+                <h1>Фосфонаты "Zschimmer und Schwarz", Германия</h1>
+                <p>
+                  Под маркой  PLEVREN  фирма “Zschimmer und Schwarz Mohsdorf”, Германия предлагает целый ряд фосфонатов, 
+                  которые применяются для производства средств бытовой химии и в водообработке вот уже несколько лет. 
+                  Представленные фосфонаты имеют сходные общие химические свойства, предполагающие общую взаимозаменяемость фосфонатов. 
+                  Однако, такая точка зрения не совсем верная. Так как фосфонаты имеют различную химическую структуру , то, соответственно, и выраженные их характеристики проявляются по-разному. 
+                  Этот факт позволяет предлагать из нашего ассортимента продукты, которые могут использоваться в различных химических и технических сферах.
+                </p>
+          </div>
+          <div class="clr"></div>
+      </div>
+      
+    </div>
+  </div>
+  <div class="clr"></div>
+  <div class="content">
+    <div class="content_resize">
+      <div class="mainbar">
+        <div class="article">
+          
+          <?php echo $content; ?>
+        </div>
+      </div>
+      <div class="sidebar">
+            <div class="search">
+              <form id="form" name="form" method="post" action="">
+                <span>
+                <input name="q" type="text" class="keywords" id="textfield" maxlength="50" value="Поиск..." />
+
+                <input name="b" type="image" src="images/search.gif" class="button" />
+                </span>
+              </form>
+            </div>
+          
+            <div class="gadget">
+                    <h3 class="color_red">
+                    <span>Эксклюзивный дистрибьютор в Росии</span></h3>
+                      <div class="clr"></div>
+
+                      <strong>ИП Пелевина Галина Евгеньевна</strong></br>
+                          Телефон - +7 4912 30 19 33<br>
+                      Телефон/Факс - +7 4912 24 14 94</br>
+                      Моб - +7 910 576 28 56</br>
+                      Email - pelevina.galina@gmail.com</br><br>
+
+                      <strong>Склад готовой продукции:</strong></br>
+                          Абрамова Инна Владимировна<br>
+                      Моб.тел. склада - +7 920 637 25 76</br>
+                      Телефон склада - + 7 4912 41 80 71</br>
+                      Email - abramova_inna5@mail.ru</br>
+            </div>
+            <div class="gadget">
+              <h2>Виды фосфонатов</h2>
+              <div class="clr"></div>
+
+              <ul class="sb_menu">
+                <?php foreach (Category::getTree(0) as $key => $value) : ?>
+                 <li><?php echo $value['text']; ?></li>
+                <?php endforeach; ?>
+
+              </ul>
+            </div>
+           
+      
+      </div>
+      <div class="clr"></div>
+    </div>
+  </div>
+  <div class="fbg">
+    <div class="fbg_resize">
+      <div class="col c1">
+        <h2><span>Фото продукции</span></h2>
+        <img src="/images/phosphonate.jpg" alt="фосфонаты" class="float_left"/>
+        <img src="/images/svechenie_phosphonata.jpg" alt="фосфонаты" class="float_left" />
+      </div>
+
+      <div class="col c3">
+        <h2><span>Контакты</span></h2>
+        <strong>Эксклюзивный дистрибьютор в России:</strong>
+
+        <strong>ИП Пелевина Галина Евгеньевна</strong></br>
+            Телефон - +7 4912 30 19 33<br>
+        Телефон/Факс - +7 4912 24 14 94</br>
+        Моб - +7 910 576 28 56</br>
+        Email - pelevina.galina@gmail.com</br>
+        
+      </div>
+      <div class="clr"></div>
+    </div>
+    <div class="footer">
+      <p class="lr">&copy; Copyright 2012-2013 ИП Пелевина.</p>
+      <div class="clr"></div>
+    </div>
+  </div>
+</div>
+</body>
+    
+</html>

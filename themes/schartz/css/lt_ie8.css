@@ -1,0 +1,8 @@
+#header_clipping
+{
+  clip: rect(0px 980px 100px 0px);
+}
+
+#vertical_carousel ul li span.topnews-pad {
+  clip: rect(0px 218px 219px 0px);
+}

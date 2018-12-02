@@ -1,0 +1,1 @@
+<?php echo $this->renderPartial('_form', array('video'=>$video,'list_videos' => $list_videos,'action'=>$action)); ?>

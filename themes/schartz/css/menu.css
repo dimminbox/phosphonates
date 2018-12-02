@@ -1,0 +1,75 @@
+#top_bar_menu
+{
+  margin-left: 250px;
+  height: 15px;
+  width: auto;
+  font-family: Verdana, Arial, sans-serif, Helvetica, Times New Roman;
+  font-size: 9px;
+  color: #FFF;
+  text-transform: uppercase;
+  line-height: 14px;
+}
+
+#top_bar_menu a
+{
+  font-family: Verdana, Arial, sans-serif, Helvetica, Times New Roman;
+  font-size: 9px;
+  color: #FFF;
+  text-transform: uppercase;
+  line-height: 14px;
+}
+
+#top_bar_menu a:hover
+{
+  border-bottom: 1px dotted #FFF;
+}
+
+/* ------------------------------------------------------------------------------------ */
+
+.blank
+{
+  background-color: #FFF;
+}
+
+tr.me
+{
+  cursor: pointer;
+}
+
+tr.me td
+{
+  height: 25px;
+}
+
+td.line
+{
+  height: 7px;
+}
+
+td.norm
+{
+  background-color: #C2CEE8;
+}
+
+td.sel
+{
+  background-color: #7997CD;
+}
+
+td.light
+{
+  background-color: #E0E6F4;
+}
+
+td.st0
+{
+  background-color: #DAD8DB;
+}
+
+td.sel a, td.sel a:hover
+{
+  color: #FFF;
+  font-weight: bold;
+}
+
+/* ------------------------------------------------------------------------------------ */

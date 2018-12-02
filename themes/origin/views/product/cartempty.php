@@ -1,0 +1,1 @@
+<h2><?=Yii::t('main','Your shopping cart is empty')?></h2>

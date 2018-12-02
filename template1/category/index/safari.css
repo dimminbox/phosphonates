@@ -1,0 +1,21 @@
+#vert_menu{
+width: 100%;
+background: #eef6fd; /* Old browsers */
+background: -moz-linear-gradient(left, #eef6fd 0%, #ffffff 50%, #eef6fd 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, right top, color-stop(0%,#eef6fd), color-stop(50%,#ffffff), color-stop(100%,#eef6fd)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(left, #eef6fd 0%,#ffffff 50%,#eef6fd 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(left, #eef6fd 0%,#ffffff 50%,#eef6fd 100%); /* Opera11.10+ */
+background: -ms-linear-gradient(left, #eef6fd 0%,#ffffff 50%,#eef6fd 100%); /* IE10+ */
+    border: 2px solid #EAF4FC;
+	-moz-border-radius: 0px 0px 5px 5px;
+	-webkit-border-radius: 0px 0px 5px 5px;
+	border-radius: 0px 0px 5px 5px;
+	behavior: url(border-radius.htc);
+	float:left;
+	position: relative;
+	background-repeat: no-repeat;
+	text-align: justify;
+	color: #0553cc;
+	font-size: 14px;
+	margin-top: -2px;
+	}

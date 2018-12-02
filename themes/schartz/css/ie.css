@@ -1,0 +1,16 @@
+.big_area
+{
+  width: 285px;
+  height: 150px;
+}
+
+
+div.content ul
+{
+  margin-left: 25px;
+  margin-top: -5px;
+  list-style-image: url(../media/content/arrows_ie.gif);
+  list-style-type: none;
+}
+
+

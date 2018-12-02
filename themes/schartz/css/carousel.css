@@ -1,0 +1,135 @@
+.sidebar .player {
+  width: 218px;
+  height: 255px;
+  background: url(../media/carousel/player_bg.png) no-repeat 0 219px;
+}
+
+#topnews {
+  width: 218px;
+  height: 255px;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+#topnews .wrapper {
+  width: 218px;
+  overflow: auto;
+  height: 219px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #f3f5fb;
+  z-index: 5;
+}
+
+/* Width below is max for Opera */
+#topnews .wrapper ul {
+  width: 32700px;
+  list-style: none;
+  position: absolute;
+  top: 0;
+  margin: 0;
+  padding: 0;
+}
+
+#topnews ul li {
+  display: block;
+  float: left;
+  padding: 0;
+  height: 219px;
+  width: 218px;
+  margin: 0;
+}
+
+#topnews .arrow {
+  display: block;
+  height: 15px;
+  width: 16px;
+  background: url(../media/carousel/player_buttons.png) no-repeat;
+  text-indent: -9999px;
+  position: absolute;
+  top: 224px;
+  cursor: pointer;
+  border-bottom: none !important;
+  z-index: 100;
+}
+
+#topnews .forward {
+  background-position: -60px 0;
+  left: 175px;
+}
+
+#topnews .back {
+  background-position: 0 0;
+  left: 120px;
+}
+
+#thumbNav {
+  position: relative;
+  top: 323px;
+  text-align: center;
+}
+
+#start-stop {
+  background: url(../media/carousel/player_buttons.png) no-repeat -40px 0;
+  width: 16px;
+  heigth: 15px;
+  position: absolute;
+  left: 148px;
+  top: 224px;
+  z-index: 100;
+  border-bottom: none !important;
+}
+
+#start-stop.playing {
+  background-position: -20px 0;
+}
+
+#start-stop:hover {
+  
+}
+
+/*
+  Prevents
+*/
+#topnews .wrapper ul ul {
+  position: static;
+  margin: 0;
+  background: none;
+  overflow: visible;
+  width: auto;
+  border: 0;
+}
+
+#topnews .wrapper ul ul li {
+  float: none;
+  height: auto;
+  width: auto;
+  background: none;
+}
+
+#topnews .wrapper ul ul li {
+  float: none;
+  height: auto;
+  width: auto;
+  background: none;
+}
+
+/* Texte */
+#topnews ul li span.topnews-pad {
+  position: absolute;
+  padding: 10px;
+  display: block;
+  clip: rect(0px, 218px, 219px, 0px);
+}
+
+#topnews ul li h2.topnews-headline {
+  width: 200px;
+}
+
+#topnews ul li span.topnews-text {
+  color: #484848;
+  font-size: 12px;
+  line-height: 165%;
+}
+
