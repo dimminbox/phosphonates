@@ -45,9 +45,10 @@ class Product extends CActiveRecord
 			array('price', 'numerical'),
 			array('articul', 'length', 'max'=>30),
 			array('url', 'length', 'max'=>500),
+			array('file', 'length', 'max'=>500),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, price, active, top, articul, url, sort', 'safe', 'on'=>'search'),
+			array('id, price, active, top, articul, url, sort, file', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -80,7 +81,8 @@ class Product extends CActiveRecord
 			'articul' => 'Артикул',
 			'url' => 'УРЛ',
 			'sort' => 'Сортировка',
-			'parent' => 'Входит в раздел'
+			'parent' => 'Входит в раздел',
+			'file' => 'Файл'
 		);
 	}
 

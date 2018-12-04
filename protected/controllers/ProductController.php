@@ -51,8 +51,9 @@ class ProductController extends Controller
             
             $product = ProductLang::model()->with(array('product.prod_attr.attr_label'=>
                                             array('condition'=>"product.url='$url'",'order'=>'attr_label.id'))
-                                      )->findAll();
-            if ($product->title!='')
+									  )->findAll();
+									  
+            if ($product[0]->title!='')
                 $this->title = $product[0]->title;
             else
                 $this->title = $product[0]->name;
@@ -65,7 +66,7 @@ class ProductController extends Controller
 	}
 
 
-        public function actionSearch()
+    public function actionSearch()
 	{            
 	    $search = $_GET['search'];
             $products = ProductLang::model()->findAll("name like '%$search%' or extra_text like '%$search%'");

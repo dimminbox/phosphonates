@@ -1,4 +1,9 @@
  <div class="container sectionContent">
+ <div class="row">
+ <? foreach($categories as $category) :?>
+ <span><a href="<?=$category["url"]?>"><?=$category["name"]?></a></span><br>
+ <? endforeach ; ?>
+ </div>
         <div class="row">
           <div class="col-sm-12">
             <h1 class="title"><?=$cur_category->name; ?></h1>

@@ -75,6 +75,18 @@
         
         <div class="row">
             <div class="labels">
+               <?php echo $form->labelEx($model,'file'); ?>
+            </div>
+            <div class="inputs">
+                <span class="input_wrapper2">
+                    <?php echo $form->textField($model,'file',array('maxlength'=>500)); ?>
+                </span>
+            </div>
+            <?php echo $form->error($model,'file'); ?>
+        </div>
+
+        <div class="row">
+            <div class="labels">
                <?php echo $form->labelEx($prod_lang,'title'); ?>
             </div>
             <div class="inputs">

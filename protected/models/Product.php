@@ -44,6 +44,7 @@ class Product extends CActiveRecord implements IECartPosition
 			array('active, top, sort', 'numerical', 'integerOnly'=>true),
 			array('price', 'numerical'),
 			array('articul', 'length', 'max'=>30),
+			array('file', 'length', 'max'=>512),
 			array('url', 'length', 'max'=>500),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.

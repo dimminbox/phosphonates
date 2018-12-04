@@ -52,9 +52,16 @@ class CategoryController extends Controller
 		
 			$_category = Category::model()->with(array('cat_language','products.product.prod_attr.attr_label'=>array('condition'=>'product.active=1','order'=>'product.sort DESC, attr_label.id desc')))->findByAttributes(array('url'=>$url));
 	    
-            $categories = Category::model()->with(array('cat_language','products.product.prod_attr.attr_label'=>array('condition'=>'product.active=1','order'=>'product.sort DESC, attr_label.id desc')))
-                                          ->findAll("parent=$_category->id or cat_language.id = $_category->id" );
-            
+            $_categories = Category::model()->with(array('cat_language','products.product.prod_attr.attr_label'=>array('condition'=>'product.active=1','order'=>'product.sort DESC, attr_label.id desc')))
+                                          ->findAll("parent=$_category->parent" );
+			$arrCategories = [];
+			foreach($_categories as $sCategory) {
+
+				$arrCategory["name"] = $sCategory->cat_language[0]->name;
+				$arrCategory["url"] = "/category/".$sCategory->url;
+				$arrCategory["active"] = ($_category->url == $sCategory->url);
+				$arrCategories[] = $arrCategory;
+			}
             if ($_category->cat_language[0]->title!='')
                 $this->title = $_category->cat_language[0]->title;
             else
@@ -85,7 +92,12 @@ class CategoryController extends Controller
 				}
 			}
 
-            $this->render('index',array('attrs'=>$attrs, 'products'=>$_category->products,'cur_category' => $_category->cat_language[0]));
+            $this->render('index',array(
+				'attrs'=>$attrs, 
+				'categories'=>$arrCategories, 
+				'products'=>$_category->products,
+				'cur_category' => $_category->cat_language[0])
+			);
 	}
 
 	/**

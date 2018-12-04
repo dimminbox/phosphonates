@@ -1,24 +1,22 @@
-<div class="extra_text">
-    <h1><?php echo $product[0]->name; ?></h1>
-    <table style="border:0; margin-top: 10px;">
-     <?php foreach ($product[0]->product->prod_attr as $_index=>$attr):?>
-            <?php if ((isset($attr->attr_label))&&($attr->value!='')) :?>
-            <?php $class = (fmod($_index,2)==0) ? 'zeile1' : 'zeile2'; ?>
-            <tr>
-                <td class="<?php echo $class; ?>">
-                    <strong>
-                        <?php print $attr->attr_label->name;?>
-                    </strong>
-                </td>
-                <td class="<?php echo $class; ?>">
-                    <?php print $attr->value; ?>
-                </td>
-            </tr>
-            <?php endif; ?>
-    <? endforeach; ?>
-    </table>
-    <div class="extra_desc">
-        <?php echo $product[0]->extra_text?>
-    </div>
-</div>
-
+<div class="container sectionContent">
+        <div class="row">
+          <div class="col-sm-12">
+            <h1 class="title"><?=$product[0]->name; ?></h1>
+            <div class="mb5">
+            <?php foreach ($product[0]->product->prod_attr as $_index=>$attr):?>
+                <?php if ((isset($attr->attr_label))&&($attr->value!='')) :?>
+                    <p><span class="bold"><?=$attr->attr_label->name;?>:</span>	<?=$attr->value;?></p>
+                <?php endif; ?>
+            <? endforeach; ?>
+            </div>
+            <div class="extra_desc" style="margin-top: 20px;">
+                <?=$product[0]->extra_text?>
+                <??>
+                <a href="/files/<?=$product[0]->product->file?>" class="downloadLink">
+                    <img src="<?=Yii::app()->theme->baseUrl?>/images/pdf-download.png">
+                    <p>Скачать</p>
+                </a>
+            </div>
+          </div>
+        </div>
+      </div>

@@ -48,7 +48,7 @@ class ProductLang extends CActiveRecord
                         array('extra_text', 'length', 'min'=>0),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id_prod, id_lang, name, title, meta_descr, meta_keywords, extra_text', 'safe', 'on'=>'search'),
+			array('id_prod, id_lang, name, file,  title, meta_descr, meta_keywords, extra_text', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -77,7 +77,7 @@ class ProductLang extends CActiveRecord
 			'title' => 'Title',
 			'meta_descr' => 'Meta Descr',
 			'meta_keywords' => 'Meta Keywords',
-			'extra_text' => 'Extra Text',
+			'extra_text' => 'Extra Text'
 		);
 	}
 
