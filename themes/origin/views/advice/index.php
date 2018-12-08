@@ -1,3 +1,6 @@
+<div class="container sectionContent">
+        <div class="row">
+          <div class="col-sm-12">
  <div id="news">
                 <h2><?=Yii::t('main','Advice');?></h2><br>
 		<? foreach ($advice as $adv) :?>
@@ -11,4 +14,7 @@
                   </p>      </p>  
                         </div>
 		<? endforeach; ?>
+</div>
+</div>
+</div>
 </div>

@@ -1,3 +1,6 @@
+<div class="container sectionContent">
+        <div class="row">
+          <div class="col-sm-12">
 <div id="event_page">
     <?php foreach ($events as $event):?> 
       <? if (isset($event->event_lang[0])) :?>
@@ -8,4 +11,7 @@
 	</div>
       <? endif; ?>
     <? endforeach; ?>
+</div>
+</div>
+</div>
 </div>

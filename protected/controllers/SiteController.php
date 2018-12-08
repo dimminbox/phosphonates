@@ -41,8 +41,16 @@ class SiteController extends Controller
 
 	public function actionContact()
 	{
-	    $this->title = Yii::app()->params['main_contact'];
-            $this->render('contact');
+		$this->title = Yii::app()->params['main_contact'];
+		$model = new ContactForm();
+		if (isset($_POST['ContactForm'])) {
+			$model->attributes = $_POST['ContactForm'];
+			$model->save();
+		}
+
+        return $this->render('contact', [
+            'model' => $model,
+		]);
 	}
 	public function actionError()
 	{
