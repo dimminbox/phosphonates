@@ -43,6 +43,7 @@ class CategoryLang extends CActiveRecord
 			array('id, id_lang', 'numerical', 'integerOnly'=>true),
 			array('name', 'length', 'max'=>600),
 			array('title', 'length', 'max'=>600),
+			array('nameShort', 'length', 'max'=>600),
 			array('meta_descr, meta_keywords', 'length', 'max'=>200),
 			array('description', 'length', 'min'=>0),
 			array('bottom', 'length', 'min'=>0),

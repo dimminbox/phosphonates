@@ -1,18 +1,22 @@
-<?php echo Yii::app()->runController('/event/view/id/1'); 
-?>
 
-<div class="container sectionContent" id="#feedback">
+<div class="container sectionContent" id="feedback">
+        <div class="row">
+          <div class="col-sm-12">
+          <?php echo Yii::app()->runController('/event/view/id/1'); ?>
+          </div>
+          </div>
+          </div>
+
+<div class="container sectionContent" id="feedbackForm">
         <div class="row">
           <div class="col-sm-6">
-
+        <h3>Обратная связь</h3>
         <?php $form=$this->beginWidget('CActiveForm',["htmlOptions"=>['class'=>"was-validated"]]); ?>
+            <div style="font-size: 12px;" class="<?=$alertClass?>"><?=$message?></div>
 
             <div class="form-group">
                 <?php echo $form->label($model,'first_name'); ?>
                 <?php echo $form->textField($model,'first_name',['class'=> 'form-control','required'=>'true']); ?>
-                <div class="invalid-tooltip">
-          Please choose a unique and valid username.
-        </div>
             </div>
 
             <div class="form-group">
@@ -22,7 +26,7 @@
 
             <div class="rform-groupow">
                 <?php echo $form->label($model,'email'); ?>
-                <?php echo $form->textField($model,'email',['class'=> 'form-control','required'=>'true']) ?>
+                <?php echo $form->textField($model,'email',['type'=>'email', 'class'=> 'form-control','required'=>'true']) ?>
             </div>
 
             <div class="form-group">
@@ -35,6 +39,16 @@
                 <?php echo $form->textArea($model,'body',['class'=> 'form-control','required'=>'true']) ?>
             </div>
 
+            <div class="form-group">
+                <?php echo $form->labelEx($model,'verifyCode'); ?>
+                <?php echo $form->textField($model,'verifyCode'); ?>
+                <?php $this->widget('CCaptcha', array(
+                    'clickableImage'=>true,
+                    'showRefreshButton'=>true,
+                    'buttonLabel' => 'Новый код')
+                );?>
+            </div>
+            
            <div class="form-group" style="margin-top: 10px;">
                 <?php echo CHtml::submitButton('Отправить',['class'=>'btn btn-primary']); ?>
             </div>

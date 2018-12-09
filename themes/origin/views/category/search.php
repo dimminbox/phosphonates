@@ -1,4 +1,5 @@
-<div style="margin-top: 20px;">
+<div class="container sectionContent">
+ <div class="row">
 <h2 class="name">Результаты поиска</h2>
 <div class="extra_text">
 <?php if (count($products)!=0):?>
@@ -33,4 +34,4 @@
 <?php endif;?>
 </div>
 </div>
-
+</div>

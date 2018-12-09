@@ -42,6 +42,7 @@ class ProductLang extends CActiveRecord
 			array('id_prod, id_lang, name', 'required'),
 			array('id_prod, id_lang', 'numerical', 'integerOnly'=>true),
 			array('name', 'length', 'max'=>255),
+			array('nameShort', 'length', 'max'=>255),
 			array('title', 'length', 'max'=>70),
 			array('meta_descr', 'length', 'max'=>215),
 			array('meta_keywords', 'length', 'max'=>50),

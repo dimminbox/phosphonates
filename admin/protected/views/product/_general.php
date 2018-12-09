@@ -15,6 +15,18 @@
     
         <div class="row">
             <div class="labels">
+               <?php echo $form->labelEx($prod_lang,'nameShort'); ?>
+            </div>
+            <div class="inputs">
+                <span class="input_wrapper2">
+                    <?php echo $form->textField($prod_lang,'nameShort'); ?>
+                </span>
+            </div>
+            <?php echo $form->error($prod_lang,'nameShort'); ?>
+        </div>
+
+        <div class="row">
+            <div class="labels">
              <?php echo $form->labelEx($model,'articul'); ?>
             </div>
             <div class="inputs">

@@ -67,6 +67,7 @@ return array(
                         'showScriptName'=>false,
 			'urlFormat'=>'path',
 			'rules'=>array(
+				'/category/search' => 'category/search',
 				'/contact' => 'site/contact',
 				'/files' => 'file/index',
 				'/advice' => 'advice/index',

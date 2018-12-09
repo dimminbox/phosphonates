@@ -68,7 +68,7 @@ class ProductController extends Controller
 
     public function actionSearch()
 	{            
-	    $search = $_GET['search'];
+	    	$search = $_REQUEST['search'];
             $products = ProductLang::model()->findAll("name like '%$search%' or extra_text like '%$search%'");
             $this->render('search',array('products'=>$products));
 	}

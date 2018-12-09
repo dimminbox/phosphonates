@@ -29,9 +29,9 @@ class SiteController extends Controller
 
 	public function actionIndex()
 	{ 
-	    /*$this->title = Yii::app()->params['main_titl/e'];
+	    $this->title = Yii::app()->params['main_title'];
 	    $this->meta_descr = Yii::app()->params['main_description'];
-	    $criteria = new CDBCriteria;
+	    /*$criteria = new CDBCriteria;
 	    $criteria->with = array('news_lang');
 	    $criteria->compare('active',1);
 	    $criteria->order = 't.id desc';
@@ -43,13 +43,33 @@ class SiteController extends Controller
 	{
 		$this->title = Yii::app()->params['main_contact'];
 		$model = new ContactForm();
+		$message = "";
+		$alertClass = '';		
 		if (isset($_POST['ContactForm'])) {
 			$model->attributes = $_POST['ContactForm'];
-			$model->save();
+			if ($model->validate()) {
+				$model->save();
+				$message = "Спасибо за Ваше обращение.";
+				$model->attributes = [];
+				$alertClass = 'alert alert-success';
+			} else {
+				$messages = [];
+				$errors = array_values($model->getErrors());
+				foreach( $errors as $error) {
+					
+					if (isset($error[0]))
+						$messages[] = $error[0];
+				}
+				$message = implode("<br>",$messages);
+				$alertClass = 'alert alert-danger';
+			}
+
 		}
 
         return $this->render('contact', [
-            'model' => $model,
+			'model' => $model,
+			'message' => $message,
+			'alertClass'=> $alertClass,
 		]);
 	}
 	public function actionError()

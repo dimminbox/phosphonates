@@ -43,7 +43,7 @@ class ContentLang extends CActiveRecord
 			array('id_event, id_lang, content', 'required'),
 			array('id_event, id_lang', 'numerical', 'integerOnly'=>true),
 			array('title', 'length', 'max'=>128),
-                        array('short_content', 'length', 'max'=>128),
+						array('short_content', 'length', 'max'=>128),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('id_event, id_lang, content, short_content', 'safe', 'on'=>'search'),

@@ -1,11 +1,11 @@
  <div class="container sectionContent">
- <div class="row">
- <? foreach($categories as $category) :?>
- <span><a href="<?=$category["url"]?>"><?=$category["name"]?></a></span><br>
- <? endforeach ; ?>
- </div>
         <div class="row">
           <div class="col-sm-12">
+          <ul class="list-inline halfBlock">
+ <? foreach($categories as $category) :?>
+ <li class="list-inline-item"><a style="font-size: 13px;" href="<?=$category["url"]?>"><?=$category["name"]?></a></li>
+<? endforeach ; ?>
+</ul>
             <h1 class="title"><?=$cur_category->name; ?></h1>
             <div class="flex-center">
             <?=$cur_category->bottom; ?>

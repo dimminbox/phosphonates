@@ -27,7 +27,7 @@ class CategoryController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
+				'actions'=>array('index','view', 'search'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -44,9 +44,50 @@ class CategoryController extends Controller
 		);
 	}
 
-	/**
-	 * Lists all models.
-	 */
+	public function actionSearch()
+	{
+			$search = $_REQUEST["search"];
+	    
+            $_categories = Category::model()->with(array('cat_language','products.product.prod_attr.attr_label'=>array('condition'=>'product.active=1','order'=>'product.sort DESC, attr_label.id desc')))
+                                          ->findAll("products.name like '%$search%' or products.extra_text like '%$search%'");
+			$arrCategories = [];
+
+			$this->title = "Результаты поиска по запросу $search";			
+			
+			$attrs = [];
+			$products = [];
+			foreach($_categories as $_category) {
+			foreach ($_category->products as $product) {
+				$products[] = $product;
+				foreach ($product->product->prod_attr as $_index=>$attr) {
+					if ($attr->value!="") {
+						$value = $attr->value;
+						$notEmpty = true;
+					} else {
+						$value = "-";
+					}
+					$attrs[ $attr->attr_label->name ] [$product->id_prod] = $value;
+				}
+			}
+		}
+			foreach($attrs as $name=>$values) {
+				$isEmpty = true;
+				foreach($values as $id_prod=>$value) {
+					$isEmpty = $isEmpty && ($value == "-");
+				}
+				if ($isEmpty) {
+					unset($attrs[$name]);
+				}
+			}
+
+            $this->render('search',array(
+				'attrs'=>$attrs, 
+				'categories'=>$arrCategories, 
+				'products'=>$products
+				)
+			);
+	}
+
 	public function actionIndex($url='')
 	{
 		
@@ -57,7 +98,7 @@ class CategoryController extends Controller
 			$arrCategories = [];
 			foreach($_categories as $sCategory) {
 
-				$arrCategory["name"] = $sCategory->cat_language[0]->name;
+				$arrCategory["name"] = $sCategory->cat_language[0]->nameShort;
 				$arrCategory["url"] = "/category/".$sCategory->url;
 				$arrCategory["active"] = ($_category->url == $sCategory->url);
 				$arrCategories[] = $arrCategory;

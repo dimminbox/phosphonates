@@ -19,13 +19,15 @@
             </a>
           </div>
           <div class="col-sm text-right">
+          <form action="/category/search" method="POST">
             <p class="phone">+7 4912 30 19 33</p>
             <div class="input-group mb-3 search">
-              <input type="text" class="form-control">
+              <input type="text" class="form-control" name="search">
               <div class="input-group-append">
-                <button class="btn btn-outline-secondary" type="button" id="button-addon2"></button>
+                <button class="btn btn-outline-secondary" type="submit" id="button-addon2"></button>
               </div>
             </div>
+            </form>
           </div>
         </div>
       </div>
@@ -48,7 +50,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/contact/#feedback">
+                <a class="nav-link" href="/contact/#feedbackForm">
                 <span style="padding: 0 11px;">Обратная связь</span>
                 </a>
               </li>
@@ -163,17 +165,16 @@ Email - <a href="mailto:pelevina.galina@gmail.com">pelevina.galina@gmail.com</a>
 </div>
 <div class="footerColumn">
 <ul class="list-unstyled footerList">
-    <li><a href="#">Каталог</a></li>
-    <li><a href="#">О компании</a></li>
-    <li><a href="#">Контакты</a></li>
-    <li><a href="#">Сертификаты</a></li>
-    <li><a href="#">Обратная связь</a></li>
-    <li><a href="#">Статьи</a></li>
+    <li><a href="/">Главная</a></li>
+    <li><a href="/contact">Контакты</a></li>
+    <li><a href="/files/TUEV_CERT_ISO_9001_en.pdf">Сертификаты</a></li>
+    <li><a href="/contact/#feedbackForm">Обратная связь</a></li>
+    <li><a href="/advice">Статьи</a></li>
 </ul>
 </div>
 </div>
 </div>
 </div>
-<div class="container-fluid footer dark text-center">&copy; Copyright 2012-2018 ИП Пелевина.</div>
+<div class="container-fluid footer dark text-center">&copy; Copyright 2012-2019 ИП Пелевина.</div>
   </body>
 </html>

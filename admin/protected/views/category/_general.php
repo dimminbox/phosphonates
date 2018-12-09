@@ -135,6 +135,14 @@
 
 <div class="row">
     <div class="labels">
+        <?php echo $form->labelEx($cat_lang,'nameShort'); ?>
+    </div>
+    <?php echo $form->textField($cat_lang,'nameShort',array('size'=>70,'maxlength'=>70)); ?>
+    <?php echo $form->error($cat_lang,'nameShort'); ?>
+</div>
+
+<div class="row">
+    <div class="labels">
         <?php echo $form->labelEx($cat_lang,'meta_descr'); ?>
     </div>
     <?php echo $form->textArea($cat_lang,'meta_descr',array('rows'=>5,'cols'=>100)); ?>
