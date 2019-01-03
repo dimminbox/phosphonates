@@ -13,14 +13,30 @@
   <body>
     <div class="wrapper">
       <div class="container header">
+      <div class="row text-right">
+      Продажа продуктов марки PLEVREN на территории Российской Федерации осуществляется исключительно:
+      </div>
         <div class="row">
           <div class="col-sm">
             <a class="headerLogo" href="/">
             </a>
           </div>
+
+           <div class="col-sm text-right">
+           <p style="margin: 20px 0px; color: #4c729c;"></p>
+           <p style="margin: 0px; color: #4c729c;">Телефон склада готовой продукции:<br> + 7 920 637 25 76, +7 4912 47 18 89</p>
+          <p style="margin: 0px; color: #4c729c;">Абрамова Инна Владимировна</p>
+          <p style="margin: 0px; color: #4c729c;">abramova_inna5@mail.ru</p>
+            
+
+          </div>
+
           <div class="col-sm text-right">
           <form action="/category/search" method="POST">
-            <p class="phone">+7 4912 30 19 33</p>
+          <p style="margin: 0px; color: #4c729c;">ИП ПЕЛЕВИНА ГАЛИНА ЕВГЕНЬЕВНА</p>
+          <p style="margin: 0px; color: #4c729c;">+7 4912 30 19 33</p>
+          <p style="margin: 0px; color: #4c729c;"> + 7 910 576 28 56</p>
+          <p style="margin: 0px; color: #4c729c;">pelevina.galina@gmail.com</p>
             <div class="input-group mb-3 search">
               <input type="text" class="form-control" name="search">
               <div class="input-group-append">
@@ -29,6 +45,9 @@
             </div>
             </form>
           </div>
+
+         
+
         </div>
       </div>
       <div class="container-fluid menuWrapper">
