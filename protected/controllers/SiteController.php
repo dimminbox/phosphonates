@@ -48,6 +48,14 @@ class SiteController extends Controller
 		if (isset($_POST['ContactForm'])) {
 			$model->attributes = $_POST['ContactForm'];
 			if ($model->validate()) {
+
+				$subject = "Обращение с сайта phosphonates.ru";
+				$to = "pelevina.galina@gmail.com";
+				$body = "<p>Клиент - ".$model->first_name. " ".$model->last_name."</p>";
+				$body .= "<p>$body</p>";
+				
+				mail($to, $subject, $body);
+				
 				$model->save();
 				$message = "Спасибо за Ваше обращение.";
 				$model->attributes = [];
