@@ -2,16 +2,16 @@
         <div class="row">
           <div class="col-sm-12">
  <div id="news">
-                <h2><?=Yii::t('main','Advice');?></h2><br>
-		<? foreach ($advice as $adv) :?>
-		  <div class="article">
-                        <strong><h2><?=$adv->advice_lang->name?></h2></strong>
-                            <p class="news_content">
+                <h3 style="margin-top: 10px;"><?=Yii::t('main','Advice');?></h3>
+		<? foreach ($advice as $index=>$adv) :?>
+		  <div class="article" style="margin: 30px 0px;">
+                        <strong><h3><a href="<?=Yii::app()->createUrl('advice/view',array('id'=>$adv->id))?>"><?=$index+1?>.<?=$adv->advice_lang->name?></a></h3></strong>
+                            
                                  <?=mb_substr(strip_tags($adv->advice_lang->content),0,1500);?>
-                                 <span style="padding-left : 10px;"> 
+                                 <p style="padding-top : 10px;"> 
                                      <a href="<?=Yii::app()->createUrl('advice/view',array('id'=>$adv->id))?>"><b>Подробнее</b></a> 
-                                 </span>
-                  </p>      </p>  
+                                 </p>
+                  </p>      
                         </div>
 		<? endforeach; ?>
 </div>
