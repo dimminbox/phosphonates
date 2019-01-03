@@ -13,7 +13,12 @@
   <body>
     <div class="wrapper">
       <div class="container header">
-      <div class="row text-right">
+
+      <div class="row text-right" style="color: #4c729c; font-weight: bold;">
+      <marquee behavior="alternate" direction="right">ФОСФОНАТЫ МАРКИ PLEVREN</marquee>
+      </div>
+
+      <div class="row text-right" style="display: none;">
       Продажа продуктов марки PLEVREN на территории Российской Федерации осуществляется исключительно:
       </div>
         <div class="row">
@@ -23,8 +28,8 @@
           </div>
 
            <div class="col-sm text-right">
-           <p style="margin: 20px 0px; color: #4c729c;"></p>
-           <p style="margin: 0px; color: #4c729c;">Телефон склада готовой продукции:<br> + 7 920 637 25 76, +7 4912 47 18 89</p>
+           
+           <p style="margin: 23px 0px 0px 0px; color: #4c729c;">Телефон склада готовой продукции:<br> + 7 920 637 25 76, +7 4912 47 18 89</p>
           <p style="margin: 0px; color: #4c729c;">Абрамова Инна Владимировна</p>
           <p style="margin: 0px; color: #4c729c;">abramova_inna5@mail.ru</p>
             
