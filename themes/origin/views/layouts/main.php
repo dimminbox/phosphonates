@@ -14,7 +14,7 @@
     <div class="wrapper">
       <div class="container header">
 
-      <div class="row text-right" style="color: #4c729c; font-weight: bold;">
+      <div class="row text-right" style="color: #4c729c; font-weight: bold; font-size: 20px;">
       <marquee behavior="alternate" direction="right">ФОСФОНАТЫ МАРКИ PLEVREN</marquee>
       </div>
 
@@ -38,7 +38,7 @@
 
           <div class="col-sm text-right">
           <form action="/category/search" method="POST">
-          <p style="margin: 0px; color: #4c729c;">ИП ПЕЛЕВИНА ГАЛИНА ЕВГЕНЬЕВНА</p>
+          <p style="margin: 0px; color: #4c729c; font-weight: bold; font-size: 15px;">ИП ПЕЛЕВИНА ГАЛИНА ЕВГЕНЬЕВНА</p>
           <p style="margin: 0px; color: #4c729c;">+7 4912 30 19 33</p>
           <p style="margin: 0px; color: #4c729c;"> + 7 910 576 28 56</p>
           <p style="margin: 0px; color: #4c729c;">pelevina.galina@gmail.com</p>
